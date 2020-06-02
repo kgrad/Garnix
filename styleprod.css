@@ -1,0 +1,357 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+body {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+.social {
+    position: fixed;
+    width: 25vw;
+    top: 20vw;
+    right: -23.6vw;
+    transition-duration: 1s;
+    z-index: 999;
+}
+
+.social a img {
+    width: 100%;
+}
+
+.social:hover {
+    transition-duration: 1s;
+    right: 0vw;
+}
+
+header {
+
+    display: grid;
+    grid-template-columns: 10% 10% 50% 15% 15%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "logowanie fav logo szuk kosz "
+        "linia linia linia linia linia"
+        "lista lista lista lista lista"
+        "liniadol liniadol liniadol liniadol liniadol";
+    width: 95%;
+    margin: auto;
+    z-index: 5;
+
+}
+
+img {
+    width: 100%;
+}
+
+header a {
+    display: inline-block;
+    color: #000;
+}
+
+.logowanie {
+    grid-area: logowanie;
+    margin-top: 13.9vw;
+    border-right: 1px solid #000;
+    width: 100%;
+    text-align: center;
+
+}
+
+.ulub {
+    grid-area: fav;
+    margin-top: 13.9vw;
+    width: 100%;
+    text-align: center;
+}
+
+.logo {
+    grid-area: logo;
+    width: 50%;
+    margin: auto;
+}
+
+.szukaj {
+    grid-area: szuk;
+    margin: auto;
+    margin-top: 13vw;
+
+}
+
+.koszyk {
+    grid-area: kosz;
+    margin: auto;
+    margin-top: 13vw;
+    text-decoration: none;
+}
+
+.koszyk img {
+    margin: auto;
+    width: 20%;
+    margin-left: 2vw;
+    margin-right: .6vw;
+}
+
+.linia {
+    border-bottom: 2px solid #000;
+    width: 100%;
+    margin: auto;
+    margin-top: 2vw;
+    grid-area: linia;
+}
+
+
+form.szukanie input {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-right: none;
+    float: left;
+    width: 80%;
+    background: #fff;
+}
+
+form.szukanie button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+    transition-duration: .6s;
+
+}
+
+form.szukanie button:hover {
+    background: rgba(49, 48, 48, 0.904);
+    transition-duration: 1s;
+}
+
+.lipoz {
+    border-bottom: 2px solid #000;
+    width: 100%;
+    margin: auto;
+    grid-area: liniadol;
+    margin-bottom: 2vw;
+}
+
+.lista {
+    grid-area: lista;
+    margin-top: 1vw;
+    margin-bottom: .5vw;
+}
+
+.new {
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    flex-direction: row;
+    height: 2em;
+}
+
+header ul li ul li {
+    position: relative;
+    background-color: #EEE;
+    padding-left: 1vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+header ul li ul {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: start;
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+a {
+    display: block;
+    color: #000;
+}
+
+header ul>li {
+    width: 100%;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "bread bread"
+        "zdj info"
+        "opis opis"
+        "polecane polecane";
+
+}
+
+.bread {
+    grid-area: bread;
+    margin-left: 5vw;
+    margin-bottom: 1vw;
+}
+
+.bread * {
+    display: inline-block;
+}
+
+.obrazy {
+    grid-area: zdj;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "l1 p"
+        "l2 p"
+        "l3 p";
+    margin-left: 15vw;
+}
+
+.obrazy * {
+    margin: 1vw;
+
+}
+
+.big {
+    grid-area: p;
+}
+
+.info {
+    grid-area: info;
+    margin-left: 15vw;
+}
+
+.info img {
+    width: 30%;
+}
+
+.info>* {
+    margin: 1vw;
+}
+
+.info input {
+    padding: .6vw;
+    border-radius: 1px;
+}
+
+.op {
+    grid-area: opis;
+    width: 90%;
+    margin: auto;
+    border-top: 1px solid #000;
+    padding-top: 1vw;
+    border-bottom: 1px solid #000;
+    padding-bottom: 1vw;
+}
+
+.pol {
+    grid-area: polecane;
+    margin-bottom: 3vw;
+    width: 90%;
+    margin: auto;
+    margin-top: 1vw;
+}
+
+h5 {
+    text-decoration: line-through;
+    margin-left: 1vw;
+}
+
+.cena * {
+    display: inline-block;
+}
+
+h4 {
+    margin-left: 2vw;
+    color: #ff0000;
+}
+
+h2 {
+    margin-bottom: 1vw;
+}
+
+h7 {
+    margin-top: 21vw;
+}
+
+select {
+    padding: .7vw;
+}
+
+.carousel-nav-icon {
+    height: 48px;
+    width: 48px;
+}
+
+.carousel-item .col,
+.col-sm,
+.col-md {
+    margin: 20px;
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 34% 33% 33%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "pomoc konto info";
+    background-color: #000;
+    color: #fff;
+    z-index: 2;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: auto;
+    margin-top: 1vw;
+}
+
+footer ul li:first-of-type {
+    margin-bottom: 1vw;
+    color: rgb(42, 164, 239);
+}
+
+footer ul li {
+    margin-bottom: .5vw;
+}
+
+.podpis {
+    margin-top: 1vw;
+    margin-bottom: 4vw;
+}
